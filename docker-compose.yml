@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  dike:
+    privileged: true
+    build: .
+    network_mode: "host"
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /dev/bus/usb:/dev/bus/usb
+      - ./docs:/root/docs
+    environment:
+      DISPLAY: ${DISPLAY}
+      

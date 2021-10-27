@@ -1,0 +1,2 @@
+pcscd
+gosigndesktop --no-sandbox
