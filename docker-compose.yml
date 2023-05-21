@@ -8,6 +8,7 @@ services:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - /dev/bus/usb:/dev/bus/usb
       - ./docs:/root/docs
+      - ${XAUTHORITY}:/root/xauthority
     environment:
       DISPLAY: ${DISPLAY}
-      
+      XAUTHORITY: /root/xauthority
